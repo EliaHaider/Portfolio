@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elia Haider - Vector Artist & Illustrator</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div>Elia Haider</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <img src="images/Profile.png" alt="Profile Picture" class="profile-img">
+    <h1>Elia Haider</h1>
+    <p id="typed-text">Vector Artist, Illustrator & Icon Designer</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about hidden">
+    <h2>About Me</h2>
+    <p>
+      I’m Elia Haider, a creative vector artist from Gilgit-Baltistan, Skardu, Pakistan. I specialize in crafting scalable vector images, silhouettes, icons, and detailed illustrations using Adobe Illustrator. As a Shutterstock contributor, I’m passionate about creating artwork that stands out and meets diverse design needs.
+    </p>
+    <div class="info-grid">
+      <div class="info-item">📍 Skardu, Pakistan</div>
+      <div class="info-item">🎨 Vectors, Silhouettes & Illustrations</div>
+      <div class="info-item">🛠️ Adobe Illustrator</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects hidden">
+    <h2>My Works</h2>
+    <div class="project-grid">
+      <a href="Projects/vectors& Silhouettes.html" class="project-card">
+        <img src="images/T1.png" alt="Vectors, Silhouettes & Icons" class="project-img">
+        <h3>Vectors, Silhouettes & Icons</h3>
+      </a>
+    </div>
+    <div class="project-grid">
+      <a href="Projects/illustration_showcase.html" class="project-card">
+        <img src="images/T2.png" alt="Illustrations" class="project-img">
+        <h3>Illustrations</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact hidden">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a href="mailto:haiderhashmi112201@gmail.com" class="contact-item">📧 Email</a>
+      <a href="https://www.instagram.com/elia_haider_ig/" target="_blank" class="contact-item">📸 Instagram</a>
+    </div>
+    <!-- Copyable Email with Icon -->
+    <div style="margin-top: 10px; text-align: center;">
+      <p style="font-family: monospace; font-size: 14px; background-color: #f4f4f4; padding: 8px 12px; border-radius: 5px; display: inline-flex; align-items: center;">
+        <span id="copyEmail">haiderhashmi112201@gmail.com</span>
+        <button onclick="copyEmail()" title="Copy Email" style="margin-left: 8px; cursor: pointer; background: none; border: none; font-size: 16px;">
+          📋
+        </button>
+      </p>
+    </div>
+  </section>
+
+  <!-- JavaScript for Copy -->
+  <script>
+    function copyEmail() {
+      const emailText = document.getElementById("copyEmail").textContent;
+      navigator.clipboard.writeText(emailText).then(() => {
+        alert("Email copied to clipboard!");
+      });
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

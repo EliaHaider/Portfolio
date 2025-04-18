@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectors, Silhouettes & Icons</title>
+<link rel="icon" type="image/png" href="../images/logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            position: relative; /* For positioning back icon */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 80px;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .box h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .more-box {
+            background-color: #6b7280;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 40px;
+            transition: background-color 0.3s;
+        }
+
+        .more-box:hover {
+            background-color: #4b5563;
+        }
+
+        .more-box h3 {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .back-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            fill: #ff0000; /* Red color for back icon */
+            transition: opacity 0.3s;
+        }
+
+        .back-icon:hover {
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg class="back-icon" onclick="window.location.href='../index.html'" viewBox="0 0 24 24">
+        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+    </svg>
+    <h1>Vectors, Silhouettes & Icons</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="images/vector1.png" alt="Dog Silhouette">
+            <h3>Dog Silhouette</h3>
+        </div>
+        <div class="box">
+            <img src="images/vector2.png" alt="Tree Vector">
+            <h3>Human Vector</h3>
+        </div>
+        <div class="box">
+            <img src="images/vector3.png" alt="Human Icon">
+            <h3>Office Vector</h3>
+        </div>
+        <div class="box">
+            <img src="images/vector4.png" alt="Apple Vector">
+            <h3>Tree Vector</h3>
+        </div>
+    </div>
+    <div class="more-box" onclick="window.open('https://www.shutterstock.com/g/EliaDesigns', '_blank')">
+        <h3>More</h3>
+    </div>
+
+    <script>
+        // Handle More button click
+        document.querySelectorAll('.more-box').forEach(box => {
+            box.addEventListener('click', () => {
+                window.open('https://www.shutterstock.com/g/EliaDesigns', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
